@@ -40,20 +40,18 @@ const Entreprise = () => {
               <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 max-w-2xl">
                 Choisissez votre point d'entrée, on s'occupe du reste
               </h1>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://formsubmit.co/snowdenyves@gmail.com"
-                  className="btn-accent"
-                >
-                  Demander un diagnostic
-                </a>
-                <a
-                  href="https://formsubmit.co/snowdenyves@gmail.com"
-                  className="border border-white/30 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-white/10 transition-all inline-flex items-center gap-2"
-                >
-                  Recevoir une proposition
-                  <ArrowRight size={16} />
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="/contact" className="btn-accent">
+                    Demander un diagnostic
+                  </a>
+                  <a
+                    href="/contact"
+                    className="border border-white/30 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-white/10 transition-all inline-flex items-center gap-2"
+                  >
+                    Recevoir une proposition
+                    <ArrowRight size={16} />
+                  </a>
+                </div>
               </div>
             </AnimatedSection>
           </div>
