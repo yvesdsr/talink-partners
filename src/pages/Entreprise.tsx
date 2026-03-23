@@ -41,14 +41,11 @@ const Entreprise = () => {
                 Choisissez votre point d'entrée, on s'occupe du reste
               </h1>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://formsubmit.co/snowdenyves@gmail.com"
-                  className="btn-accent"
-                >
+                <a href="/contact" className="btn-accent">
                   Demander un diagnostic
                 </a>
                 <a
-                  href="https://formsubmit.co/snowdenyves@gmail.com"
+                  href="/contact"
                   className="border border-white/30 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-white/10 transition-all inline-flex items-center gap-2"
                 >
                   Recevoir une proposition
@@ -83,7 +80,7 @@ const Entreprise = () => {
                     ))}
                   </ul>
                   <a
-                    href="https://formsubmit.co/snowdenyves@gmail.com"
+                    href="/contact"
                     className="text-accent text-sm font-medium hover:underline inline-flex items-center gap-1"
                   >
                     Demander un devis <ArrowRight size={14} />

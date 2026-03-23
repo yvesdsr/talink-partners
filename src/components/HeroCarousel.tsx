@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import hero1 from '@/assets/hero-1.jpeg';
 import hero2 from '@/assets/hero-2.png';
 import hero3 from '@/assets/hero-4.jpeg';
@@ -25,7 +26,7 @@ const slides = [
     title: 'Formez vos équipes pour demain',
     subtitle: 'IA, marketing digital, anglais professionnel — des formations concrètes et impactantes.',
     cta: 'En savoir plus',
-    ctaHref: '/entreprise',
+    ctaHref: '/particuliers',
   },
 ];
 
@@ -78,10 +79,10 @@ const HeroCarousel = () => {
               <p className="text-lg text-white/80 mb-8 leading-relaxed">
                 {slides[current].subtitle}
               </p>
-              <a href={slides[current].ctaHref} className="btn-accent text-base">
+              <Link to={slides[current].ctaHref} className="btn-accent text-base">
                 {slides[current].cta}
                 <ChevronRight size={18} />
-              </a>
+              </Link>
             </motion.div>
           </AnimatePresence>
         </div>
