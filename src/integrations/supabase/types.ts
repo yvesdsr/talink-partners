@@ -14,7 +14,146 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      applications: {
+        Row: {
+          additional_info: string | null
+          city: string | null
+          country: string | null
+          created_at: string
+          cv_file_url: string | null
+          email: string
+          first_name: string
+          id: string
+          job_id: string | null
+          last_name: string
+          phone: string | null
+        }
+        Insert: {
+          additional_info?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          cv_file_url?: string | null
+          email: string
+          first_name: string
+          id?: string
+          job_id?: string | null
+          last_name: string
+          phone?: string | null
+        }
+        Update: {
+          additional_info?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          cv_file_url?: string | null
+          email?: string
+          first_name?: string
+          id?: string
+          job_id?: string | null
+          last_name?: string
+          phone?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "applications_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "job_offers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      job_offers: {
+        Row: {
+          created_at: string
+          description: string
+          id: string
+          location: string
+          share_link: string | null
+          title: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string
+          id?: string
+          location?: string
+          share_link?: string | null
+          title: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: string
+          location?: string
+          share_link?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      posts: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          title: string
+        }
+        Insert: {
+          content?: string
+          created_at?: string
+          id?: string
+          title: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      spontaneous_applications: {
+        Row: {
+          additional_info: string | null
+          city: string | null
+          country: string | null
+          created_at: string
+          cv_file_url: string | null
+          desired_position: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          phone: string | null
+        }
+        Insert: {
+          additional_info?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          cv_file_url?: string | null
+          desired_position: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          phone?: string | null
+        }
+        Update: {
+          additional_info?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          cv_file_url?: string | null
+          desired_position?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
