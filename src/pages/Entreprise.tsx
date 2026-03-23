@@ -81,7 +81,7 @@ const Entreprise = () => {
                     ))}
                   </ul>
                   <a
-                    href="https://formsubmit.co/snowdenyves@gmail.com"
+                    href="/contact"
                     className="text-accent text-sm font-medium hover:underline inline-flex items-center gap-1"
                   >
                     Demander un devis <ArrowRight size={14} />
