@@ -79,10 +79,10 @@ const HeroCarousel = () => {
               <p className="text-lg text-white/80 mb-8 leading-relaxed">
                 {slides[current].subtitle}
               </p>
-              <a href={slides[current].ctaHref} className="btn-accent text-base">
+              <Link to={slides[current].ctaHref} className="btn-accent text-base">
                 {slides[current].cta}
                 <ChevronRight size={18} />
-              </a>
+              </Link>
             </motion.div>
           </AnimatePresence>
         </div>
